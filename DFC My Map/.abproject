@@ -1,0 +1,45 @@
+{
+  "ProjectName": "DFC My Map",
+  "ProjectGuid": "130ff4b7-ff24-4c53-9e67-f5f87bda03c2",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.DFCMyMap",
+  "DisplayName": "DFC My Map",
+  "Author": "",
+  "Description": "DFC My Map",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{6775159c-80c7-4706-b457-5e483e24ce2e}",
+  "WP8ProductID": "{e4cc9e3b-8e16-4686-bed0-1bfeff6a7890}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.DFCMyMap",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
