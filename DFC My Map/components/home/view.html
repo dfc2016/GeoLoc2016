@@ -1,7 +1,50 @@
-<div data-role="view" data-title="Home View" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+<div data-role="view" data-title="DFC Map Test" data-layout="main-nonav" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
 
     <!-- START_CUSTOM_CODE_home -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
+    <div class="container-fluid" style="width:100%; min-height:150px;">
+        <div class="row">
+            <div class="col-sx-12">
+                <h4>Controles del Mapa</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div data-role="button" data-click="goToMiraflores" class="col-sx-6 btn btn-success">
+                Miraflores
+            </div>
+            <div id="ubiMi" data-role="button" data-enable="false" data-click="showUbiMiraflores" class="col-sx-6 btn btn-info">
+                ubicaciones Mi
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sx-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div data-role="button" data-click="goToBarranco" class="col-sx-6 btn btn-success">
+                Barranco
+            </div>
+            <div id="ubiBa" data-role="button" data-enable="false" data-click="showUbiBarranco" class="col-sx-6 btn btn-info">
+                ubicaciones Ba
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sx-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div data-role="button" data-click="goToChorrillos" class="col-sx-12 btn btn-success">
+                Chorrillos
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sx-12">&nbsp;</div>
+        </div>
+    </div>
+    
+    <!-- INICIO EJEMPLO MAPA OPENSTREETVIEW -->    
+    <div id="map" style="width:100%;">
+        DFC Visualizar acqui el Mapa
+    </div>
+    <!-- FIN EJEMPLO MAPA OPENSTREETVIEW -->
+    
     <!-- END_CUSTOM_CODE_home -->
 </div>

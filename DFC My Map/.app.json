@@ -5,15 +5,13 @@
       "type": "kendo-ui-mobile:view",
       "name": "home",
       "components": [],
-      "title": "Home View",
-      "addToNavigation": true,
-      "icon": "home"
+      "title": "DFC Map Test",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [],
   "name": "kendoUiMobileApp",
-  "navigation": "tabstrip",
+  "navigation": "none",
   "view": "home",
-  "transition": "slide",
   "skin": "flat"
 }
