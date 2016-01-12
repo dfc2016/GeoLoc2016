@@ -6,12 +6,22 @@
       "name": "home",
       "components": [],
       "title": "DFC Map Test",
-      "addToNavigation": false
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "geolocation",
+      "components": [],
+      "title": "DFC Geo Location Test",
+      "addToNavigation": true,
+      "icon": "search"
     }
   ],
   "dataProviders": [],
   "name": "kendoUiMobileApp",
-  "navigation": "none",
+  "navigation": "tabstrip",
   "view": "home",
+  "transition": "slide",
   "skin": "flat"
 }

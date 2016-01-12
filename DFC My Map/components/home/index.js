@@ -19,14 +19,11 @@ app.home = kendo.observable({
                     }]
         });
     },
-    afterShow: function () {
-
-    }
+    afterShow: function() {}
 });
 
 // START_CUSTOM_CODE_home
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
-
 
 function goToMiraflores() {
     var map = $("#map").data("kendoMap");
@@ -57,7 +54,7 @@ function showUbiMiraflores() {
             type: "tile",
             urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
             subdomains: ["a", "b", "c"],
-                }, {
+        }, {
             type: "marker",
             dataSource: {
                 transport: {
@@ -69,35 +66,35 @@ function showUbiMiraflores() {
             },
             locationField: "latlng",
             titleField: "name"
-                }]
+        }]
     });
 }
 
 function showUbiBarranco() {
     console.log(">> showUbiBarranco");
     $("#map").kendoMap({
-        center: [-12.1597,-77.0136], //-12.1597,-77.0136
+        center: [-12.1597, -77.0136], //-12.1597,-77.0136
         zoom: 13,
-        layers: [
-            {
-                type: "tile",
-                urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
-                subdomains: ["a", "b", "c"],
-            },
-            {
-                type: "marker",
-                dataSource: ds,
-                locationField: "latlng",
-                titleField: "name"
-            }
-        ]
+        layers: [{
+            type: "tile",
+            urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+            subdomains: ["a", "b", "c"],
+        }, {
+            type: "marker",
+            dataSource: ds,
+            locationField: "latlng",
+            titleField: "name"
+        }]
     });
 
     var ds = new kendo.data.DataSource({
-        data: [
-            {latlng: [-12.1419529, -77.0215224], name: "Posición A"},
-            {latlng: [-12.14351,-77.01586], name: "Posición B"},
-        ]
+        data: [{
+            latlng: [-12.1419529, -77.0215224],
+            name: "Posición A"
+        }, {
+            latlng: [-12.14351, -77.01586],
+            name: "Posición B"
+        }, ]
     });
 
     var map = $("#map").data("kendoMap");
