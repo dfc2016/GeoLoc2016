@@ -83,7 +83,8 @@ function showUbiBarranco() {
             type: "marker",
             dataSource: ds,
             locationField: "latlng",
-            titleField: "name"
+            titleField: "name",
+            shape: "pin" // "pinTarget" default
         }]
     });
 
