@@ -37,11 +37,15 @@ function onSuccess__OLD__(position) {
             shape: "pin",
             tooltip: { content: "Posicion A" }
             },
-
         ]
     });
 };
 
+/*
+* On Success function for mapping 2 layers
+* a) Layer for positions of interesting sites
+* b) Layer for position of location's device
+*/
 
 function onSuccess(position) {
     console.log("DFC >>> Renderizar el Mapa...[LOCALIZACION]");
@@ -52,12 +56,14 @@ function onSuccess(position) {
     $("#miPosicion").kendoMap({
         center: [position.coords.latitude, position.coords.longitude],
         zoom: 14,
-        layers: [{
+        layers: [
+        {
             type: "tile",
             urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
             subdomains: ["a", "b", "c"],
         },
         {
+            //Layer for positions of interesting sites
             type: "marker",
             dataSource: ds,
             locationField: "latlng",
@@ -65,6 +71,7 @@ function onSuccess(position) {
             shape: "pin",
         },
         {
+            //Layer for position of location's device
             type: "marker",
             dataSource: dsTarget,
             locationField: "latlng",
@@ -77,19 +84,12 @@ function onSuccess(position) {
     
     var ds = new kendo.data.DataSource({
         data:  [
-            // {
-            // latlng: [position.coords.latitude, position.coords.longitude],
-            // //shape: "pinTarget",
-            // name: { content: "Mi posicion" }
-            // },
             {
             latlng: [position.coords.latitude + 0.005, position.coords.longitude + 0.005],
-            //shape: "pin",
             name: { content: "Posicion A" }
             },
             {
             latlng: [position.coords.latitude + 0.005, position.coords.longitude - 0.005],
-            //shape: "pin",
             name: { content: "Posicion A" }
             },
         ]
@@ -103,7 +103,6 @@ function onSuccess(position) {
         data:  [
             {
             latlng: [position.coords.latitude, position.coords.longitude],
-            //shape: "pinTarget",
             name: { content: "Mi posicion" }
             },
         ]
