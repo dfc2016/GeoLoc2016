@@ -9,9 +9,10 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
+    <!--DFC Styles Kendo UI to render DataViz Map -->
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2015.3.1111/styles/kendo.common.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2015.3.1111/styles/kendo.metro.min.css" />
-    
+
     <link href="styles/main.css" rel="stylesheet">
 
     <script src="kendo/js/jquery.min.js"></script>
@@ -19,13 +20,12 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="cordova.js"></script>
     
-    <!--ATTENCION Cargar la lib Kendo Mobile antes de la lib Kendo General -->
+    <!--DFC IMPORTANT: Always load kendo.mobile.min.js befre kendo.all.min.js to avoid name conflict-->    
     <script src="kendo/js/kendo.mobile.min.js"></script>
-    <!--ATTENCION Cargar la lib Kendo Mobile antes de la lib Kendo General -->    
-    
     <script src="http://kendo.cdn.telerik.com/2015.3.1111/js/kendo.all.min.js"></script>
 
     <script src="app.js"></script>
+    
 </head>
 <body id="kendoUiMobileApp">
     <script src="components/geolocation/index.js"></script>
