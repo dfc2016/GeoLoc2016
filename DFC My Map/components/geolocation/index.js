@@ -127,4 +127,50 @@ function testLocalizacion() {
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
 
+function posAlmacenesDespachador() {
+	console.log("DFC >>> Renderizar el Mapa con... [POS. ALMACENES] y [DESPACHADORES]");
+    // 14/-12.0554/-77.0451 CALLAO
+    $("#miPosicion").kendoMap({
+        center: [-12.0554,-77.0451],
+        zoom: 14,
+        layers: [
+            {
+                type: "tile",
+                urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+                subdomains: ["a", "b", "c"],
+            },
+            {
+                //Layer for positions of interesting sites
+                type: "marker",
+                dataSource: {
+                    transport: {
+                            read: {
+                                url: "http://54.213.238.161/geodata/sitios-de-interes-Callao.json",
+                                dataType: "json"
+                            }                
+                    }
+                },
+                locationField: "latlng",
+                titleField: "name",
+                shape: "pin",
+            },
+            {
+                //Layer for position of visited sites
+                type: "marker",
+                dataSource: {
+                    transport: {
+                            read: {
+                                url: "http://54.213.238.161/geodata/sitios-visitados-Callao.json",
+                                dataType: "json"
+                            }                
+                    }
+                },
+                locationField: "latlng",
+                titleField: "name",
+                shape: "pinTarget",
+            },
+        ],
+    });
+            
+}
 // END_CUSTOM_CODE_geolocation
