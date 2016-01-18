@@ -86,11 +86,11 @@ function onSuccess(position) {
         data:  [
             {
             latlng: [position.coords.latitude + 0.005, position.coords.longitude + 0.005],
-            name: { content: "Posicion A" }
+            name: "Posicion A" 
             },
             {
             latlng: [position.coords.latitude + 0.005, position.coords.longitude - 0.005],
-            name: { content: "Posicion A" }
+            name: "Posicion A" 
             },
         ]
     });
@@ -103,7 +103,7 @@ function onSuccess(position) {
         data:  [
             {
             latlng: [position.coords.latitude, position.coords.longitude],
-            name: { content: "Mi posicion" }
+            name: "Mi posicion" 
             },
         ]
     });
@@ -170,7 +170,86 @@ function posAlmacenesDespachador() {
                 shape: "pinTarget",
             },
         ],
-    });
-            
+    });            
 }
+
+function testLocDespachadorAlmacenes() {
+    console.log("DFC >>> testLocDespachadorAlmacenes >>> Capturar posicion... [DESPACHADOR]");
+    navigator.geolocation.getCurrentPosition(onSuccessDespAlm, onErrorDespAlm);
+}
+
+/*
+* FX  onSuccessDespAlm(...) the 2nd load remote
+* positions.
+* On Success function for mapping 2 layers
+* a) Layer for positions of interesting sites
+* b) Layer for position of location's device
+*/
+
+function onSuccessDespAlm(position) {
+    console.log("DFC >>> onSuccessDespAlm >>> Renderizar el Mapa...[DESPACHADOR] y [POS. ALMACENES REMOTA]");
+    console.log("DFC >>> Coordinadas iniciales: ");
+    console.log("DFC >>> [LAT]: "+position.coords.latitude);
+    console.log("DFC >>> [LNG]: "+position.coords.longitude);
+
+    $("#miPosicion").kendoMap({
+        center: [position.coords.latitude, position.coords.longitude],
+        zoom: 12,
+        layers: [
+        {
+            type: "tile",
+            urlTemplate: "http://#= subdomain #.tile.openstreetmap.org/#= zoom #/#= x #/#= y #.png",
+            subdomains: ["a", "b", "c"],
+        },
+        {
+            //Layer for positions of interesting sites
+            type: "marker",
+            dataSource: {
+                transport: {
+                        read: {
+                            url: "http://54.213.238.161/geodata/sitios-de-interes-Callao.json",
+                            dataType: "json"
+                        }
+            	}
+            },
+            locationField: "latlng",
+            titleField: "name",
+            shape: "pin",
+        },
+        {
+            //Layer for position of location's device
+            type: "marker",
+            dataSource: dsTarget,
+            locationField: "latlng",
+            titleField: "name",
+            shape: "pinTarget",
+        },
+
+        ],
+    });
+  
+    var map = $("#miPosicion").data("kendoMap");
+
+    var dsTarget = new kendo.data.DataSource({
+        data:  [
+            {
+            latlng: [position.coords.latitude, position.coords.longitude],
+            name: "Mi posicion" 
+            },
+        ]
+    });
+
+    var layerTarget = map.layers[2];
+    layerTarget.setDataSource(dsTarget);
+    
+    console.log("DFC >>> Mapping pin and pinTarget");
+};
+
+// onError Callback receives a PositionError object
+//
+function onErrorDespAlm(error) {
+    alert('code: ' + error.code + '\n' +
+        'message: ' + error.message + '\n');
+}
+
 // END_CUSTOM_CODE_geolocation

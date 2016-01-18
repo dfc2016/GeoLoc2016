@@ -16,6 +16,14 @@
       "title": "DFC Geo Location Test",
       "addToNavigation": true,
       "icon": "search"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "search",
+      "components": [],
+      "title": "Search Location",
+      "addToNavigation": true,
+      "icon": "settings"
     }
   ],
   "dataProviders": [],

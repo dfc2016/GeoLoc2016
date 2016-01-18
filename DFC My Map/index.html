@@ -14,12 +14,12 @@
 <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2015.3.1111/styles/kendo.metro.min.css" />
 -->
 
-<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.common.min.css"/>
-<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.rtl.min.css"/>
+<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.common.min.css">
+<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.rtl.min.css">
 <!-- IMPORTANT: Switch theme to change look and feel to pin and pin-target object -->
 <!-- Kendo Silver theme -->
 <!--     http://kendo.cdn.telerik.com/2016.1.112/styles/Silver/markers.png -->
-    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.silver.min.css"/>
+<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.silver.min.css">
 <!-- Kendo Metro theme -->
 <!--     http://kendo.cdn.telerik.com/2016.1.112/styles/Metro/markers.png -->
 <!--     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.metro.min.css" /> -->
@@ -27,7 +27,7 @@
 <!--     http://kendo.cdn.telerik.com/2016.1.112/styles/Nova/markers.png -->
 <!-- <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.nova.min.css"/> -->
 
-<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.mobile.all.min.css"/>
+<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.mobile.all.min.css">
 
 
 <link href="styles/main.css" rel="stylesheet">
@@ -37,12 +37,14 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="cordova.js"></script>
 
-<!--DFC IMPORTANT: Always load kendo.mobile.min.js befre kendo.all.min.js to avoid name conflict-->    
+<!--DFC IMPORTANT: Always load kendo.mobile.min.js befre kendo.all.min.js to avoid name conflict-->
 <script src="kendo/js/kendo.mobile.min.js"></script>
 <script src="http://kendo.cdn.telerik.com/2016.1.112/js/kendo.all.min.js"></script>
 
 <script src="app.js"></script>
+
 <body id="kendoUiMobileApp">
+    <script src="components/search/index.js"></script>
     <script src="components/geolocation/index.js"></script>
     <script src="components/home/index.js"></script>
     <div data-role="layout" data-id="main">
@@ -58,6 +60,7 @@
             <div data-role="tabstrip" id="navigation-container">
                 <a href="components/home/view.html" data-icon="home">DFC Map Test</a>
                 <a href="components/geolocation/view.html" data-icon="search">DFC Geo Location Test</a>
+                <a href="components/search/view.html" data-icon="settings">Search Location</a>
             </div>
         </footer>
     </div>
