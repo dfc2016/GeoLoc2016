@@ -1,35 +1,34 @@
-<div data-role="view" data-title="DFC Search Location" data-layout="main" data-model="app.search" data-show="app.search.onShow" data-after-show="app.search.afterShow">
+<div data-role="view" data-title="DFC Capture LAT,LNG" data-layout="main" data-model="app.search" data-show="app.search.onShow" data-after-show="app.search.afterShow">
     <!-- START_CUSTOM_CODE_search -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <div class="container-fluid" style="width:100%; min-height:150px;">
         <div class="row">
-            <div class="col-sx-12">
+            <div class="col-xs-12">
                 <h4>Captar posiciones en el Mapa</h4>
             </div>
         </div>
         <div class="row">
-            <div class="col-sx-12 btn btn-info" onclick="captarLatLgn();">
-                Captar LAT/LGN
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sx-4">
+            <div class="col-xs-4">
                 <h4>
                     <span class="label label-info">LAT</span>
                 </h4>
             </div>
-            <div class="col-sx-8">
-                <div id="LatValue"></div>
+            <div class="col-xs-8">
+                <h4>
+                    <span id="LatValue"></span>
+                </h4>
             </div>
         </div>
         <div class="row">
-            <div class="col-sx-4">
+            <div class="col-xs-4">
                 <h4>
                     <span class="label label-info">LGN</span>
                 </h4>
             </div>
-            <div class="col-sx-8">
-                <div id="LgnValue"></div>
+            <div class="col-xs-8">
+                <h4>
+                    <div id="LgnValue"></div>                    
+                </h4>
             </div>
         </div>
     </div>

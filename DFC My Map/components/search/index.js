@@ -25,13 +25,11 @@ app.search = kendo.observable({
 
 // START_CUSTOM_CODE_search
 // Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
-function captarLatLgn()
-{
-    console.log("DFC >>> Captar Lat y Lng...");    
-}
-
 function onClick(e)
 {
-    console.log("DFC >>> "+kendo.format("Click at :: {0}", e.location.toString())); 
+    console.log("DFC >> LAT: "+kendo.toString(e.location.lat,"n6"));
+    console.log("DFC >> LNG: "+kendo.toString(e.location.lng,"n6"));
+    $("#LatValue").html(kendo.toString(e.location.lat,"n6"));
+    $("#LgnValue").html(kendo.toString(e.location.lng,"n6"));
 }
 // END_CUSTOM_CODE_search
