@@ -28,15 +28,19 @@ app.home = kendo.observable({
 function goToMiraflores() {
     var map = $("#map").data("kendoMap");
     map.center([-12.1206214, -77.0294993]).zoom(16);
-    $("#ubiMi").data("kendoMobileButton").enable(true);
-    $("#ubiBa").data("kendoMobileButton").enable(false);
+    // $("#ubiMi").data("kendoMobileButton").enable(true);
+    // $("#ubiBa").data("kendoMobileButton").enable(false);
+    $("#ubiMi").prop( "disabled", false );
+    $("#ubiBa").prop( "disabled", true );
 }
 
 function goToBarranco() {
     var map = $("#map").data("kendoMap");
     map.center([-12.1419529, -77.0215224]).zoom(16);
-    $("#ubiMi").data("kendoMobileButton").enable(false);
-    $("#ubiBa").data("kendoMobileButton").enable(true);
+    // $("#ubiMi").data("kendoMobileButton").enable(false);
+    // $("#ubiBa").data("kendoMobileButton").enable(true);
+    $("#ubiMi").prop( "disabled", true );
+    $("#ubiBa").prop( "disabled", false );
 }
 
 function goToChorrillos() {
@@ -47,6 +51,7 @@ function goToChorrillos() {
 }
 
 function showUbiMiraflores() {
+    console.log(">> showUbiMiraflores");
     $("#map").kendoMap({
         center: [-12.12065, -77.02952],
         zoom: 15,

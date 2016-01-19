@@ -1,42 +1,48 @@
-<div data-role="view" data-title="DFC Map Test" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
-
+<div data-role="view" data-title="DFC Map Explore" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
     <!-- START_CUSTOM_CODE_home -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <div class="container-fluid" style="width:100%; min-height:150px;">
         <div class="row">
-            <div class="col-sx-12">
+            <div class="col-xs-12">
                 <h4>Controles del Mapa</h4>
             </div>
         </div>
         <div class="row">
-            <div data-role="button" data-click="goToMiraflores" class="col-sx-6 btn btn-success">
-                Miraflores
+            <div class="col-xs-5">
+                <button type="button" onClick="goToMiraflores();" class="btn btn-success">
+                    Miraflores
+                </button>
             </div>
-            <div id="ubiMi" data-role="button" data-enable="false" data-click="showUbiMiraflores" class="col-sx-6 btn btn-info">
-                ubicaciones Mi
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sx-12">&nbsp;</div>
-        </div>
-        <div class="row">
-            <div data-role="button" data-click="goToBarranco" class="col-sx-6 btn btn-success">
-                Barranco
-            </div>
-            <div id="ubiBa" data-role="button" data-enable="false" data-click="showUbiBarranco" class="col-sx-6 btn btn-info">
-                ubicaciones Ba
+            <div class="col-xs-5">
+                <button id="ubiMi" type="button" onClick="showUbiMiraflores();" class="btn btn-info" disabled>
+                    ubicaciones Mi
+                </button>
             </div>
         </div>
         <div class="row">
-            <div class="col-sx-12">&nbsp;</div>
+            <div class="col-xs-12">&nbsp;</div>
         </div>
         <div class="row">
-            <div data-role="button" data-click="goToChorrillos" class="col-sx-12 btn btn-success">
-                Chorrillos
+            <div class="col-xs-5">
+                <button type="button" onClick="goToBarranco();" class="btn btn-success">
+                    Barranco
+                </button>
+            </div>
+            <div class="col-xs-5">
+                <button id="ubiBa" type="button" onClick="showUbiBarranco();" class="btn btn-info" disabled>
+                    ubicaciones Mi
+                </button>
             </div>
         </div>
         <div class="row">
-            <div class="col-sx-12">&nbsp;</div>
+            <div class="col-xs-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10">
+                <button type="button" onClick="goToChorrillos();" class="btn btn-success">
+                    Chorrillos
+                </button>
+            </div>
         </div>
     </div>
 
