@@ -64,11 +64,22 @@
     </div>
     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    <!--
+        WE HAVE TO USE 2 TILES PNG FOR THE MARKERS:
+        Tile.png --> image PNG [28x80] --> pin icon [28x40] --> *pinTarget* UP pos *pin* DOWN pos
+        Tile_2x.png --> image PNG [56x160] --> pin icon [56x80] --> *pinTarget* UP pos *pin* DOWN pos
+    -->
     <STYLE type="text/css">
-         .k-map .k-marker {
-            background-image: url(img/bcp.png) !important;
+        .k-map .k-marker {
+            background-image: url(img/Tile-29-40.png) !important;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+          .k-map .k-marker {
+            background-image: url(img/Tile-56-160.png) !important;
+          }
         }
     </STYLE>
+
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>
 
