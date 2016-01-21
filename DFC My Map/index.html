@@ -46,9 +46,9 @@
         <!-- application views will be rendered here -->
         <footer data-role="footer">
             <div data-role="tabstrip" id="navigation-container">
-                <a href="components/home/view.html" data-icon="home">DFC Map Explore</a>
-                <a href="components/geolocation/view.html" data-icon="search">DFC Geo Location</a>
-                <a href="components/search/view.html" data-icon="settings">DFC Capture LAT,LNG</a>
+                <a href="components/home/view.html" data-icon="home">Map Explore</a>
+                <a href="components/geolocation/view.html" data-icon="search">Geo Location</a>
+                <a href="components/search/view.html" data-icon="settings">Capture LAT,LNG</a>
             </div>
         </footer>
     </div>
@@ -66,9 +66,11 @@
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <!--
         WE HAVE TO USE 2 TILES PNG FOR THE MARKERS:
-        Tile.png --> image PNG [28x80] --> pin icon [28x40] --> *pinTarget* UP pos *pin* DOWN pos
-        Tile_2x.png --> image PNG [56x160] --> pin icon [56x80] --> *pinTarget* UP pos *pin* DOWN pos
+        Tile.png >>> image PNG [28x80] >>> pin icon [28x40] >>> *pinTarget* UP pos *pin* DOWN pos
+        Tile_2x.png >>> image PNG [56x160] >>> pin icon [56x80] >>> *pinTarget* UP pos *pin* DOWN pos
     -->
+    
+<!-- 
     <STYLE type="text/css">
         .k-map .k-marker {
             background-image: url(img/Tile-29-40.png) !important;
@@ -79,6 +81,7 @@
           }
         }
     </STYLE>
+-->
 
     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
 </body>

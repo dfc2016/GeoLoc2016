@@ -5,7 +5,7 @@
       "type": "kendo-ui-mobile:view",
       "name": "home",
       "components": [],
-      "title": "DFC Map Test",
+      "title": "Map Test",
       "addToNavigation": true,
       "icon": "home"
     },
@@ -13,7 +13,7 @@
       "type": "kendo-ui-mobile:view",
       "name": "geolocation",
       "components": [],
-      "title": "DFC Geo Location Test",
+      "title": "Geo Location Test",
       "addToNavigation": true,
       "icon": "search"
     },
