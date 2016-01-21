@@ -24,6 +24,14 @@
       "title": "Search Location",
       "addToNavigation": true,
       "icon": "settings"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "trackposition",
+      "components": [],
+      "title": "Track Position",
+      "addToNavigation": true,
+      "icon": "camera"
     }
   ],
   "dataProviders": [],

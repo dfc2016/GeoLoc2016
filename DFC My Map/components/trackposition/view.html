@@ -1,0 +1,50 @@
+<div data-role="view" data-title="DFC Track Position" data-layout="main" data-model="app.trackposition" data-show="app.trackposition.onShow" data-after-show="app.trackposition.afterShow">
+    <!-- START_CUSTOM_CODE_trackposition -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+    <div class="container-fluid" style="width:100%; min-height:150px;">
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Seguimiento posiciones dispositivo</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Actualizacion posicion cada 5 sec.</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <button id="startSegPos" type="button" onClick="startSeguimientoPOS();" class="btn btn-success">
+                    START
+                </button>
+            </div>
+            <div class="col-xs-3">
+                <button id="stopSegPos" type="button" onClick="stopSeguimientoPOS();" class="btn btn-danger" disabled>
+                    STOP
+                </button>
+            </div>
+            <div class="col-xs-3">
+                <button id="clearSegPos" type="button" onClick="clearSeguimientoPOS();" class="btn btn-info" disabled>
+                    CLEAR
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="errorLocPosiciones"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">&nbsp;</div>
+        </div>        
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="geoLocPosiciones"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END_CUSTOM_CODE_trackposition -->
+</div>
