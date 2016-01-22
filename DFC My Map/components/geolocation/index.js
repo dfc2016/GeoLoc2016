@@ -207,7 +207,9 @@ function onSuccessDespAlm(position) {
             dataSource: {
                 transport: {
                         read: {
-                            url: "http://54.213.238.161/geodata/sitios-de-interes-Callao.json",
+                            // http://54.213.238.161/geodata/bancosbcp.json
+                            // http://54.213.238.161/geodata/sitios-de-interes-Callao.json
+                            url: "http://54.213.238.161/geodata/bancosbcp.json",
                             dataType: "json"
                         }
             	}
